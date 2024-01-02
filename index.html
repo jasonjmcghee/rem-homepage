@@ -33,12 +33,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100%;
         }
 
         .svg-container {
             height: auto;
-            transition: opacity 0.3s;
             display: flex;
             justify-content: center;
         }
@@ -49,36 +49,30 @@
         }
 
         .content {
-            flex: 1;
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            padding-left: 830px;
         }
         
         h1 {
-            font-weight: 700;
-            font-size: 128px;
-            line-height: 155px;
+            font-weight: 600;
+            font-size: 350%;
             color: #FFFFFF;
             margin: 0;
         }
         
         p {
-            font-weight: 500;
-            font-size: 36px;
-            line-height: 44px;
+            line-height: 1.5;
             color: rgba(255, 255, 255, 0.8);
-            margin-top: 20px;
         }
         
         .download-section {
             margin-top: 20px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
         }
         
         .download-button {
@@ -86,47 +80,15 @@
             background: rgba(255, 255, 255, 0.9);
             border: 8px solid rgba(255, 255, 255, 0.2);
             border-radius: 8px;
-            padding: 26px 60px;
+            padding: 8px 32px;
             font-weight: 500;
-            font-size: 36px;
-            line-height: 44px;
             color: #222222;
             text-align: center;
         }
         
         .alpha-info {
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 29px;
+            font-size: 14px;
             color: rgba(255, 255, 255, 0.8);
-            margin-top: 20px;
-        }
-        
-        @media (max-width: 768px) {
-            .content {
-                padding-left: 20px;
-            }
-        
-            h1 {
-                font-size: 64px;
-                line-height: 77px;
-            }
-        
-            p {
-                font-size: 18px;
-                line-height: 22px;
-            }
-        
-            .download-button {
-                font-size: 18px;
-                line-height: 22px;
-                padding: 13px 30px;
-            }
-        
-            .alpha-info {
-                font-size: 12px;
-                line-height: 14px;
-            }
         }
     </style>
 </head>
