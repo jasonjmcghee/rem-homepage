@@ -7,8 +7,8 @@
     <meta name="description" content="An open source approach to locally record and enable searching everything you view on your Apple Silicon.">    
     <meta property="og:title" content="rem: Remember Everything">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rem.jason.today">
-    <meta property="og:image" content="https://rem.jason.today/social.png">
+    <meta property="og:url" content="https://rem.ing">
+    <meta property="og:image" content="https://rem.ing/social.png">
     
     <title>rem: Remember Everything</title>
     <style>
@@ -16,6 +16,7 @@
             overscroll-behavior: none;
             overflow: hidden;
             height: 100%;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
         }
         body {
             overscroll-behavior: none;
@@ -27,38 +28,110 @@
             align-items: center;
             background: linear-gradient(to bottom right, #FF8575, #FF5E8E);
         }
-        
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
         .svg-container {
             height: auto;
-            opacity: 0.7;
             transition: opacity 0.3s;
             display: flex;
             justify-content: center;
-        }
-    
-        .svg-container:hover {
-          opacity: 1.0;
-        }
-        
-        #svg-link {
-            text-decoration: none; /* Removes any underline from the anchor tag */
-            -webkit-tap-highlight-color: transparent; /* Disables tap highlight color on mobile */
         }
 
         svg {
             max-width: 250px;
             max-height: 250px;
         }
+
+        .content {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 830px;
+        }
+        
+        h1 {
+            font-weight: 700;
+            font-size: 128px;
+            line-height: 155px;
+            color: #FFFFFF;
+            margin: 0;
+        }
+        
+        p {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 44px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+        }
+        
+        .download-section {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .download-button {
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.9);
+            border: 8px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 26px 60px;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 44px;
+            color: #222222;
+            text-align: center;
+        }
+        
+        .alpha-info {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+        }
         
         @media (max-width: 768px) {
-            .svg-container {
-                width: 95%;
+            .content {
+                padding-left: 20px;
+            }
+        
+            h1 {
+                font-size: 64px;
+                line-height: 77px;
+            }
+        
+            p {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        
+            .download-button {
+                font-size: 18px;
+                line-height: 22px;
+                padding: 13px 30px;
+            }
+        
+            .alpha-info {
+                font-size: 12px;
+                line-height: 14px;
             }
         }
     </style>
 </head>
 <body>
-    <a href="https://github.com/jasonjmcghee/rem/releases/latest" id="svg-link" target="_blank">
+    <div class="container">
       <div class="svg-container">
         <svg width="465" height="459" viewBox="0 0 465 459" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_dd_135_14)">
@@ -83,6 +156,16 @@
         </defs>
         </svg>
       </div>
-    </a>
+        <div class="content">
+            <h1>Start Remembering</h1>
+            <p>Instantly access every moment you've had on your Mac, from now on. 100% local. No network. Open-source.</p>
+            <div class="download-section">
+                <a href="https://github.com/jasonjmcghee/rem/releases/latest" id="svg-link" target="_blank" class="download-button">
+                    Download for Apple Silicon
+                </a>
+                <span class="alpha-info">Alpha | Requires macOS 13+</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
